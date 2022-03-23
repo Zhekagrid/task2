@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.example.com/medicine"
+           xsi:schemaLocation="http://www.example.com/medicine sxema.xsd">
+
+    <antibiotic name="Augmentin" id="AB1">
+
+        <analogs>
+            <analog name="Supracs"/>
+            <analog name="Ciprolet"/>
+
+        </analogs>
+        <versions>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Sandoz">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>25.5</price>
+                        </box>
+                        <dosage dose="125" intake-type="once-per-day"/>
+                        <certificate number="AB1234" recording-agency="Bayer">
+                            <from>2020-05-15</from>
+                            <to>2022-05-15</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="SmithKline Beecham">
+                        <box box-type="carton">
+                            <count>20</count>
+                            <price>35</price>
+                        </box>
+                        <dosage dose="375" intake-type="twice-after-meals"/>
+                        <certificate number="AB4321" recording-agency="FDA">
+                            <from>2019-08-25</from>
+                            <to>2025-08-19</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+
+            </version>
+        </versions>
+        <need-recipe>true</need-recipe>
+    </antibiotic>
+
+
+    <pain-killer name="Nise" id="PC1">
+        <analogs>
+            <analog name="Spasmalgon"/>
+            <analog name="Paraskofen"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Dr. Reddy´s Laboratories Ltd">
+                        <box box-type="carton">
+                            <count>15</count>
+                            <price>100</price>
+                        </box>
+                        <dosage dose="25" intake-type="twice-after-meals"/>
+                        <certificate number="AD4235" recording-agency="Bayer">
+                            <from>2010-01-08</from>
+                            <to>2025-09-30</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="Ipca labarotory">
+                        <box>
+                            <count>10</count>
+                            <price>15</price>
+                        </box>
+                        <dosage dose="100" intake-type="twice-after-meals"/>
+                        <certificate number="NS2051" recording-agency="GmbH">
+                            <from>2022-01-20</from>
+                            <to>2030-05-30</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>head-pain-killer</pain-killer-type>
+    </pain-killer>
+
+
+    <vitamin name="Complex for children" id="VT1">
+        <analogs></analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="carton">
+                            <count>7</count>
+                            <price>17.5</price>
+                        </box>
+                        <dosage dose="250" intake-type="once-per-day"/>
+                        <certificate number="AS12534">
+                            <from>2015-03-25</from>
+                            <to>2027-08-25</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>5</count>
+                            <price>25</price>
+                        </box>
+                        <dosage dose="150" intake-type="twice-after-meals"/>
+                        <certificate number="ASV1743" recording-agency="bayer">
+                            <from>2015-03-25</from>
+                            <to>2027-08-25</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+        </versions>
+        <vitamine-type>a b c d2</vitamine-type>
+    </vitamin>
+
+
+</medicins>

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<medicins xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns="http://www.example.com/medicine"
+           xsi:schemaLocation="http://www.example.com/medicine sxema.xsd">
+
+    <antibiotic name="Augmentin" id="AB1">
+
+        <analogs>
+            <analog name="Supracs"/>
+            <analog name="Ciprolet"/>
+
+        </analogs>
+        <versions>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Sandoz">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>25.5</price>
+                        </box>
+                        <dosage dose="125" intake-type="once-per-day"/>
+                        <certificate number="AB1234" recording-agency="Bayer">
+                            <from>2020-05-15</from>
+                            <to>2022-05-15</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="SmithKline Beecham">
+                        <box box-type="carton">
+                            <count>20</count>
+                            <price>35</price>
+                        </box>
+                        <dosage dose="375" intake-type="twice-after-meals"/>
+                        <certificate number="AB4321" recording-agency="FDA">
+                            <from>2019-08-25</from>
+                            <to>2025-08-19</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+
+            </version>
+        </versions>
+        <need-recipe>true</need-recipe>
+    </antibiotic>
+
+    <antibiotic name="Novocs" id="AB2">
+
+        <analogs>
+            <analog name="Afiblocs"/>
+            <analog name="Levolet"/>
+            <analog name="Levaxela"/>
+        </analogs>
+        <versions>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Evertogen Life Sciences Limited">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>25.5</price>
+                        </box>
+                        <dosage dose="125" intake-type="once-per-day"/>
+                        <certificate number="JS2268" recording-agency="Green Industrial Park">
+                            <from>2005-05-15</from>
+                            <to>2025-07-29</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+        </versions>
+        <need-recipe>false</need-recipe>
+    </antibiotic>
+
+    <antibiotic name="Doxycycline" id="AB3">
+
+        <analogs>
+            <analog name="DoxycyclineFerein"/>
+            <analog name="Unidox"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="ASTELLAS PHARMA EUROPE">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>25.5</price>
+                        </box>
+                        <dosage dose="250" intake-type="once-per-day"/>
+                        <certificate number="JS2238" recording-agency="Green Industrial Park">
+                            <from>2005-05-15</from>
+                            <to>2025-07-29</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="Pharmstadart">
+                        <box>
+                            <count>15</count>
+                            <price>70</price>
+                        </box>
+                        <dosage dose="150" intake-type="twice-after-meals"/>
+                        <certificate number="KD2535" recording-agency="ASTELLAS PHARMA">
+                            <from>2015-07-31</from>
+                            <to>2030-07-31</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+        </versions>
+        <need-recipe>false</need-recipe>
+    </antibiotic>
+
+    <antibiotic name="Sumamed" id="AB4">
+
+        <analogs>
+            <analog name="Azitral"/>
+        </analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="SHREYA LIFE SCIENCES">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>25.5</price>
+                        </box>
+                        <dosage dose="250" intake-type="once-per-day"/>
+                        <certificate number="KA2342" recording-agency="KERN PHARMA">
+                            <from>2005-05-15</from>
+                            <to>2025-07-29</to>
+                        </certificate>
+                    </pharm-factory>
+
+
+                </pharm-factories>
+            </version>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="ATOLL">
+                        <box>
+                            <count>14</count>
+                            <price>10</price>
+                        </box>
+                        <dosage dose="100" intake-type="twice-after-meals"/>
+                        <certificate number="LD3556" recording-agency="Pliva Hrvatska">
+                            <from>2010-01-01</from>
+                            <to>2025-01-02</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+        </versions>
+        <need-recipe>true</need-recipe>
+    </antibiotic>
+
+    <antibiotic name="Lopracs" id="AB5">
+
+        <analogs></analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="Exir Pharmaceutica">
+                        <box box-type="carton">
+                            <count>100</count>
+                            <price>35.5</price>
+                        </box>
+                        <dosage dose="400" intake-type="once-per-day"/>
+                        <certificate number="FD3552" recording-agency="KERN PHARMA">
+                            <from>2006-05-15</from>
+                            <to>2027-07-29</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="Super-factory">
+                        <box>
+                            <count>10</count>
+                            <price>1</price>
+                        </box>
+                        <dosage dose="150" intake-type="once-per-day"/>
+                        <certificate number="FD2653" recording-agency="Bayer">
+                            <from>2001-07-30</from>
+                            <to>2010-05-30</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+        </versions>
+        <need-recipe>true</need-recipe>
+    </antibiotic>
+
+    <pain-killer name="Nise" id="PC1">
+        <analogs>
+            <analog name="Paraskofen"/>
+            <analog name="Spasmalgon"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Dr. Reddy´s Laboratories Ltd">
+                        <box box-type="carton">
+                            <count>15</count>
+                            <price>100</price>
+                        </box>
+                        <dosage dose="25" intake-type="twice-after-meals"/>
+                        <certificate number="AD4235" recording-agency="Bayer">
+                            <from>2010-01-08</from>
+                            <to>2025-09-30</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="Ipca labarotory">
+                        <box box-type="glass">
+                            <count>10</count>
+                            <price>15</price>
+                        </box>
+                        <dosage dose="100" intake-type="twice-after-meals"/>
+                        <certificate number="NS2051" recording-agency="GmbH">
+                            <from>2022-01-20</from>
+                            <to>2030-05-30</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>head-pain-killer</pain-killer-type>
+    </pain-killer>
+
+    <pain-killer name="Noshpa" id="PC2">
+        <analogs>
+            <analog name="Spasmalgon"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="OPELLA HEALTHCARE COMMERCIAL">
+                        <box box-type="glass">
+                            <count>15</count>
+                            <price>100</price>
+                        </box>
+                        <dosage dose="25" intake-type="twice-after-meals"/>
+                        <certificate number="AD5125" recording-agency="Bayer">
+                            <from>2010-01-08</from>
+                            <to>2025-09-30</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="Verofarm">
+                        <box box-type="carton">
+                            <count>10</count>
+                            <price>15</price>
+                        </box>
+                        <dosage dose="100" intake-type="twice-after-meals"/>
+                        <certificate number="KF1242" recording-agency="VOS">
+                            <from>2022-01-20</from>
+                            <to>2030-05-30</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>head-pain-killer</pain-killer-type>
+    </pain-killer>
+
+    <pain-killer name="Ketorol" id="PC3">
+        <analogs>
+            <analog name="Ketanov"/>
+            <analog name="Dolac"/>
+        </analogs>
+        <versions>
+            <version version="gel">
+                <pharm-factories>
+                    <pharm-factory name="CADILA PHARMACEUTICALS">
+                        <box box-type="glass">
+                            <count>15</count>
+                            <price>100</price>
+                        </box>
+                        <dosage dose="25" intake-type="twice-after-meals"/>
+                        <certificate number="WJ1235" recording-agency="Bayer">
+                            <from>2015-01-08</from>
+                            <to>2021-09-30</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>muscles-pain-killer</pain-killer-type>
+    </pain-killer>
+
+    <pain-killer name="Drotaverine" id="PC4">
+        <analogs>
+            <analog name="Doverin"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Biosintez Pharma">
+                        <box box-type="carton">
+                            <count>150</count>
+                            <price>10000</price>
+                        </box>
+                        <dosage dose="25" intake-type="once-per-day"/>
+                        <certificate number="WJ2523" recording-agency="FAD">
+                            <from>2017-03-08</from>
+                            <to>2027-03-08</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>muscles-pain-killer</pain-killer-type>
+    </pain-killer>
+
+    <pain-killer name="Viprosal" id="PC5">
+        <analogs>
+            <analog name="ViprosalB"/>
+
+            <analog name="Salvisar"/>
+        </analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Grindecs">
+                        <box box-type="carton">
+                            <count>15</count>
+                            <price>12</price>
+                        </box>
+                        <dosage dose="25" intake-type="once-per-day"/>
+                        <certificate number="MF1613" recording-agency="FAD">
+                            <from>2018-05-08</from>
+                            <to>2029-03-08</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <pain-killer-type>muscles-pain-killer</pain-killer-type>
+    </pain-killer>
+
+
+    <vitamin name="Complex for children" id="VT1">
+        <analogs></analogs>
+        <versions>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="carton">
+                            <count>7</count>
+                            <price>17.5</price>
+                        </box>
+                        <dosage dose="250" intake-type="once-per-day"/>
+                        <certificate number="AS1234" recording-agency="bayer">
+                            <from>2015-03-25</from>
+                            <to>2027-08-25</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>5</count>
+                            <price>25</price>
+                        </box>
+                        <dosage dose="150" intake-type="twice-after-meals"/>
+                        <certificate number="AS1743" recording-agency="bayer">
+                            <from>2015-03-25</from>
+                            <to>2027-08-25</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+        </versions>
+        <vitamine-type>a b c d</vitamine-type>
+    </vitamin>
+
+    <vitamin name="Complex for adults" id="VT2">
+        <analogs>
+            <analog name="Complevit"/>
+        </analogs>
+        <versions>
+            <version version="powder">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>17</count>
+                            <price>39</price>
+                        </box>
+                        <dosage dose="250" intake-type="twice-after-meals"/>
+                        <certificate number="KD3264" recording-agency="Bayer">
+                            <from>2018-04-23</from>
+                            <to>2025-05-05</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <vitamine-type>a b c d2 b2 b12</vitamine-type>
+    </vitamin>
+
+    <vitamin name="Complevit" id="VT3">
+        <analogs>
+            <analog name="Complevit"/>
+        </analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>17</count>
+                            <price>39</price>
+                        </box>
+                        <dosage dose="250" intake-type="twice-after-meals"/>
+                        <certificate number="KD3263" recording-agency="Bayer">
+                            <from>2018-04-23</from>
+                            <to>2025-05-05</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+            <version version="tablets">
+                <pharm-factories>
+                    <pharm-factory name="Bayer">
+                        <box>
+                            <count>25</count>
+                            <price>150</price>
+                        </box>
+                        <dosage dose="250" intake-type="once-per-day"/>
+                        <certificate number="FS4266" recording-agency="MH">
+                            <from>2019-03-03</from>
+                            <to>2027-07-02</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+        </versions>
+        <vitamine-type>a b c</vitamine-type>
+    </vitamin>
+
+    <vitamin name="Super-Citrus" id="VT4">
+        <analogs>
+            <analog name="Citrus"/>
+            <analog name="Vitamins"/>
+        </analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>25</count>
+                            <price>49</price>
+                        </box>
+                        <dosage dose="15" intake-type="twice-after-meals"/>
+                        <certificate number="KD3353" recording-agency="Bayer">
+                            <from>2018-04-23</from>
+                            <to>2025-05-05</to>
+                        </certificate>
+                    </pharm-factory>
+                    <pharm-factory name="MPH">
+                        <box>
+                            <count>25</count>
+                            <price>100</price>
+                        </box>
+                        <dosage dose="175" intake-type="twice-after-meals"/>
+                        <certificate number="GF1383" recording-agency="">
+                            <from>2000-03-17</from>
+                            <to>2034-01-25</to>
+                        </certificate>
+                    </pharm-factory>
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <vitamine-type>a b c</vitamine-type>
+    </vitamin>
+
+    <vitamin name="Vitamins for the heart" id="VT5">
+        <analogs>
+            <analog name="Carvalol"/>
+        </analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="glass">
+                            <count>25</count>
+                            <price>49</price>
+                        </box>
+                        <dosage dose="15" intake-type="twice-after-meals"/>
+                        <certificate number="KD3963" recording-agency="Bayer">
+                            <from>2018-04-23</from>
+                            <to>2025-05-05</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <vitamine-type>a b c</vitamine-type>
+    </vitamin>
+
+    <vitamin name="vitamins for the eyes" id="VT6">
+        <analogs>
+            <analog name="blueberry"/>
+        </analogs>
+        <versions>
+            <version version="capsules">
+                <pharm-factories>
+                    <pharm-factory name="Doppelherz">
+                        <box box-type="carton">
+                            <count>25</count>
+                            <price>49</price>
+                        </box>
+                        <dosage dose="15" intake-type="twice-after-meals"/>
+                        <certificate number="PP3652" recording-agency="Bayer">
+                            <from>2018-04-23</from>
+                            <to>2025-05-05</to>
+                        </certificate>
+                    </pharm-factory>
+
+                </pharm-factories>
+            </version>
+
+        </versions>
+        <vitamine-type>a b c</vitamine-type>
+    </vitamin>
+
+</medicins>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.example.com/medicine"
+        xmlns:tns="http://www.example.com/medicine"
+        elementFormDefault="qualified">
+
+    <element name="medicins">
+        <complexType>
+            <sequence>
+                <element ref="tns:medical-product" minOccurs="0" maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <element name="medical-product" type="tns:medical-product" abstract="true"/>
+    <element name="antibiotic" type="tns:antibiotic" substitutionGroup="tns:medical-product"/>
+    <element name="pain-killer" type="tns:pain-killer" substitutionGroup="tns:medical-product"/>
+    <element name="vitamin" type="tns:vitamin" substitutionGroup="tns:medical-product"/>
+
+
+    <complexType name="medical-product" abstract="true">
+        <sequence>
+            <element name="analogs" type="tns:analogs"/>
+            <element name="versions" type="tns:versions"/>
+        </sequence>
+        <attribute name="id" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="[A-Z]{2}\d"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <minLength value="2"/>
+                    <maxLength value="30"/>
+                </restriction>
+            </simpleType>
+
+        </attribute>
+    </complexType>
+
+
+    <complexType name="antibiotic">
+        <complexContent>
+            <extension base="tns:medical-product">
+                <sequence>
+                    <element name="need-recipe" type="boolean" default="true"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="vitamin">
+        <complexContent>
+            <extension base="tns:medical-product">
+                <sequence>
+                    <element name="vitamine-type" type="tns:vitamins-list" maxOccurs="unbounded"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="pain-killer">
+        <complexContent>
+            <extension base="tns:medical-product">
+                <sequence>
+                    <element name="pain-killer-type" type="tns:pain-killer-type"/>
+                </sequence>
+            </extension>
+        </complexContent>
+
+    </complexType>
+
+    <complexType name="versions">
+        <sequence>
+            <element name="version" type="tns:version" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="version">
+        <sequence>
+            <element name="pharm-factories">
+                <complexType>
+                    <sequence>
+                        <element name="pharm-factory" type="tns:pharm-factory" maxOccurs="unbounded"/>
+                    </sequence>
+                </complexType>
+            </element>
+        </sequence>
+        <attribute name="version" type="tns:version-type" use="required"/>
+    </complexType>
+
+    <complexType name="pharm-factory">
+        <sequence>
+            <element name="box" type="tns:box"/>
+            <element name="dosage" type="tns:dosage"/>
+            <element name="certificate" type="tns:certificate"/>
+        </sequence>
+        <attribute name="name" type="string" use="required"/>
+    </complexType>
+
+    <complexType name="certificate">
+        <sequence>
+            <element name="from" type="date"/>
+            <element name="to" type="date"/>
+        </sequence>
+        <attribute name="number" use="required">
+            <simpleType>
+                <restriction base="ID">
+                    <pattern value="[A-Z]{2}\d{4}"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+        <attribute name="recording-agency" type="string" use="required"/>
+
+    </complexType>
+
+    <complexType name="box">
+        <sequence>
+            <element name="count" type="positiveInteger"/>
+            <element name="price">
+                <simpleType>
+                    <restriction base="double">
+                        <minExclusive value="0.0"/>
+                    </restriction>
+                </simpleType>
+            </element>
+        </sequence>
+        <attribute name="box-type" type="tns:box-type" default="default-box"/>
+    </complexType>
+
+    <complexType name="dosage">
+        <attribute name="dose" type="positiveInteger" use="required"/>
+        <attribute name="intake-type" type="tns:intake-type" use="required"/>
+    </complexType>
+
+    <complexType name="analogs">
+        <sequence>
+            <element name="analog" type="tns:analog" minOccurs="0" maxOccurs="unbounded"/>
+        </sequence>
+    </complexType>
+    <complexType name="analog">
+        <attribute name="name" use="required">
+            <simpleType>
+                <restriction base="string">
+                    <pattern value="\w+"/>
+                </restriction>
+            </simpleType>
+        </attribute>
+
+    </complexType>
+
+    <simpleType name="vitamins-list">
+        <list itemType="tns:vitamin-type"/>
+    </simpleType>
+
+    <complexType name="pharm-factory-list">
+        <sequence>
+            <element name="pharm-factory" type="tns:pharm-factory" maxOccurs="unbounded"/>
+
+        </sequence>
+
+    </complexType>
+
+    <simpleType name="version-type">
+        <restriction base="string">
+            <enumeration value="tablets"/>
+            <enumeration value="capsules"/>
+            <enumeration value="powder"/>
+            <enumeration value="gel"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="pain-killer-type">
+        <restriction base="string">
+            <enumeration value="head-pain-killer"/>
+            <enumeration value="stomach-pain-killer"/>
+            <enumeration value="muscles-pain-killer"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="intake-type">
+        <restriction base="string">
+            <enumeration value="once-per-day"/>
+            <enumeration value="twice-after-meals"/>
+
+        </restriction>
+    </simpleType>
+
+    <simpleType name="vitamin-type">
+        <restriction base="string">
+            <enumeration value="a"/>
+            <enumeration value="b"/>
+            <enumeration value="c"/>
+            <enumeration value="d"/>
+            <enumeration value="e"/>
+            <enumeration value="b12"/>
+            <enumeration value="b2"/>
+            <enumeration value="d2"/>
+
+        </restriction>
+    </simpleType>
+
+    <simpleType name="box-type">
+        <restriction base="string">
+            <enumeration value="glass"/>
+            <enumeration value="carton"/>
+            <enumeration value="default-box"/>
+        </restriction>
+    </simpleType>
+</schema>

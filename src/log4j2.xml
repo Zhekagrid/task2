@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration  status="WARN">
+    <Properties>
+       <Property name="LOG_DIR">logs </Property>
+        <Property name="file_pattern">
+            %d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{5}- %msg%n
+        </Property>
+        <Property name="console_pattern">
+            %d{ABSOLUTE} %-5level %logger{1} - %msg%n
+        </Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${console_pattern}"/>
+        </Console>
+        <RollingFile name="File" fileName="${LOG_DIR}/text.log" append="true" filePattern="${LOG_DIR}/text_%i.log" bufferedIO="true">
+            <PatternLayout pattern="${file_pattern}"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="25 KB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="File" level="INFO">
+            </AppenderRef>
+            <AppenderRef ref="Console" level="INFO">
+
+            </AppenderRef>
+        </Root>
+    </Loggers>
+</Configuration>
